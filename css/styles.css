@@ -97,13 +97,17 @@ img{
 .button:active{
   opacity: 0.4;
 }
+
+*:focus{
+  outline: 3px dotted var(--green);
+  outline-offset: 3px;
+}
 /* HEADER */
 .site-header {
   position: relative;
   z-index: 1000;
   background-color: #fff;
   padding-top: 4px;
-  padding-bottom: 4px;
 }
 
 .header-container {
@@ -147,20 +151,18 @@ img{
 
 .sitenav-item{
   padding-top: 28px;
-  padding-bottom: 28px;
   border: none;
-  border-bottom: 4px solid transparent;
+
 }
 
 .sitenav-item:not(:last-child){
   margin-right: 30px;
 }
 
-.sitenav-item:hover{
-  border-image: var(--gradied-green) 1;
-}
-
 .sitenav-link {
+  display: block;
+  padding-bottom: 27px;
+  border-bottom: 4px solid transparent;
   color: var(--txt-color);
   text-decoration: none;
   font-size: 14px;
@@ -169,8 +171,11 @@ img{
 letter-spacing: -0.11px;
 }
 
+.sitenav-link:focus,
 .sitenav-link:hover{
   color: var(--header-color);
+  border-image: var(--gradied-green) 1;
+  outline: none;
 }
 
 /* SITE-HERO */
