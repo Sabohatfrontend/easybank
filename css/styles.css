@@ -76,6 +76,11 @@ img{
 
 .main-content{
   flex-grow: 1;
+  background-image: url("../img/hero-phones-desktop.png"),
+  url("../img/hero-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 480px) top -130px,
+  left calc(50% + 600px) top -260px;
 }
 /* BUTTON */
 .button {
@@ -155,4 +160,31 @@ letter-spacing: -0.11px;
 
 .sitenav-link:hover{
   color: var(--header-color);
+}
+
+/* SITE-HERO */
+.hero {
+  padding-top: 170px;
+  padding-bottom: 170px;
+}
+
+.hero-content {
+  max-width: 450px;
+  width: 100%;
+}
+
+.hero-header {
+  margin-top: 0;
+  margin-bottom: 24px;
+  color: var(--header-color);
+  font-weight: 100;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: -1;
+}
+
+.hero-text {
+  margin-top: 0;
+  margin-bottom: 36px;
+
 }
