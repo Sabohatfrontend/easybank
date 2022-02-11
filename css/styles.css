@@ -341,7 +341,10 @@ padding: 24px;
   letter-spacing: -0.16px;
 }
 
-.articls-item-header {
+.articls-item-link {
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
   margin-top: 0;
   margin-bottom: 8px;
   color: var(--header-color);
@@ -349,6 +352,14 @@ padding: 24px;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: -0.29px;
+}
+
+.articls-item-link:hover{
+  color: var(--green);
+}
+
+.articls-item-link:active{
+  opacity: 0.6;
 }
 
 .articls-item-text {
