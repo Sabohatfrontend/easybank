@@ -77,11 +77,6 @@ img{
 
 .main-content{
   flex-grow: 1;
-  background-image: url("../img/hero-phones-desktop.png"),
-  url("../img/hero-bg-desktop.png");
-  background-repeat: no-repeat;
-  background-position: left calc(50% + 480px) top -130px,
-  left calc(50% + 600px) top -260px;
 }
 /* BUTTON */
 .button {
@@ -104,6 +99,9 @@ img{
 }
 /* HEADER */
 .site-header {
+  position: relative;
+  z-index: 1000;
+  background-color: #fff;
   padding-top: 4px;
   padding-bottom: 4px;
 }
@@ -158,6 +156,10 @@ img{
   margin-right: 30px;
 }
 
+.sitenav-item:hover{
+  border-image: var(--gradied-green) 1;
+}
+
 .sitenav-link {
   color: var(--txt-color);
   text-decoration: none;
@@ -174,10 +176,17 @@ letter-spacing: -0.11px;
 /* SITE-HERO */
 .hero {
   position: relative;
-  z-index: -1;
   padding-top: 170px;
   padding-bottom: 170px;
   background-color: #fafafa;
+  background-image: url("../img/hero-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-position: left calc(50% + 600px) top -260px;
+}
+
+.hero-container{
+  display: flex;
+  align-items: center;
 }
 
 .hero-content {
@@ -200,16 +209,17 @@ letter-spacing: -0.11px;
   margin-bottom: 36px;
 }
 
+.hero-phone {
+  position: absolute;
+  right: 0;
+
+}
+
 /* SITE-FEATURES */
 .features {
-  position: relative;
-  z-index: -1;
   padding-top: 96px;
   padding-bottom: 94px;
   background-color: #F4F5F7;
-}
-
-.features-container {
 }
 
 .features-content {
@@ -279,9 +289,6 @@ margin-right: 30px;
   padding-top: 80px;
   padding-bottom: 80px;
   background-color: #fafafa;
-}
-
-.articls-container {
 }
 
 .articls-header {
@@ -422,8 +429,7 @@ padding: 24px;
 }
 
 .footer-item {
-  max-width: 160px;
-  width: 100%;
+ width: 160px;
 }
 
 .footer-item:not(:last-child){
@@ -432,9 +438,9 @@ margin-bottom: 8px;
 
 .footer-link {
   display: block;
-  width: 100%;
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 font-size: 15px;
 line-height: 26px;
 letter-spacing: -0.23px;
@@ -463,4 +469,16 @@ color: var(--green);
 line-height: 26px;
 letter-spacing: -0.23px;
 opacity: 0.5;
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) {
+.hero{
+  background-image: url("../img/hero-bg-desktop@2x.png");
+}
 }
