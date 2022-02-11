@@ -216,7 +216,7 @@ img{
 
 .hero-phone {
   position: absolute;
-  right: 0;
+  left: calc(50% + 100px);
 
 }
 
