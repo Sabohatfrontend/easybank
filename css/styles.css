@@ -160,9 +160,6 @@ img{
 }
 
 .sitenav-link {
-  display: block;
-  padding-bottom: 27px;
-  border-bottom: 4px solid transparent;
   color: var(--txt-color);
   text-decoration: none;
   font-size: 14px;
@@ -171,11 +168,23 @@ img{
   letter-spacing: -0.11px;
 }
 
-.sitenav-link:focus,
+.sitenav-link::after{
+  display: block;
+  content: "";
+  height: 4px;
+  width: 100%;
+  background-color: transparent;
+  margin-top: 27px;
+}
+
+/* .sitenav-link:focus, */
 .sitenav-link:hover{
   color: var(--header-color);
-  border-image: var(--gradied-green) 1;
-  outline: none;
+  /* outline: none; */
+}
+
+.sitenav-link:hover.sitenav-link::after{
+  background-image: var(--gradied-green);
 }
 
 /* SITE-HERO */
